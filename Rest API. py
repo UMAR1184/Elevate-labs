@@ -1,0 +1,53 @@
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+# In-memory data store for users (id -> data)
+users = {}
+
+# GET - Retrieve all users
+@app.route('/users', methods=['GET'])
+def get_users():
+    return jsonify(users), 200
+
+# GET - Retrieve single user by id
+@app.route('/users/<int:user_id>', methods=['GET'])
+def get_user(user_id):
+    user = users.get(user_id)
+    if user:
+        return jsonify({user_id: user}), 200
+    return jsonify({'error': 'User not found'}), 404
+
+# POST - Create a new user
+@app.route('/users', methods=['POST'])
+def create_user():
+    data = request.json
+    if not data or 'id' not in data or 'name' not in data:
+        return jsonify({'error': 'Missing user data'}), 400
+    user_id = int(data['id'])
+    if user_id in users:
+        return jsonify({'error': 'User ID already exists'}), 400
+    users[user_id] = {'name': data['name']}
+    return jsonify({'msg': 'User created', 'user': {user_id: users[user_id]}}), 201
+
+# PUT - Update an existing user
+@app.route('/users/<int:user_id>', methods=['PUT'])
+def update_user(user_id):
+    data = request.json
+    if user_id not in users:
+        return jsonify({'error': 'User not found'}), 404
+    if not data or 'name' not in data:
+        return jsonify({'error': 'Missing user name'}), 400
+    users[user_id]['name'] = data['name']
+    return jsonify({'msg': 'User updated', 'user': {user_id: users[user_id]}}), 200
+
+# DELETE - Delete a user
+@app.route('/users/<int:user_id>', methods=['DELETE'])
+def delete_user(user_id):
+    if user_id in users:
+        deleted = users.pop(user_id)
+        return jsonify({'msg': 'User deleted', 'user': {user_id: deleted}}), 200
+    return jsonify({'error': 'User not found'}), 404
+
+if __name__ == '__main__':
+    app.run(debug=True)
