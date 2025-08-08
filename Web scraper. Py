@@ -1,0 +1,31 @@
+import requests
+from bs4 import BeautifulSoup
+
+# Target news website URL (e.g., BBC News homepage)
+url = 'https://www.bbc.com/news'
+
+# Set a User-Agent to mimic a browser request
+headers = {'User-Agent': 'Mozilla/5.0'}
+
+# Fetch the HTML content
+try:
+    response = requests.get(url, headers=headers)
+    response.raise_for_status()  # Check for HTTP errors
+
+    # Parse the HTML with BeautifulSoup
+    soup = BeautifulSoup(response.text, 'html.parser')
+
+    # Find all headline elements; adapt selector for the site in question
+    headlines = [
+        h2.text.strip()
+        for h2 in soup.find_all('h3')  # Use h2 or h3 depending on site structure
+    ]
+
+    # Write headlines to a .txt file
+    with open('headlines.txt', 'w', encoding='utf-8') as f:
+        for headline in headlines:
+            f.write(headline + '\n')
+
+    print("Headlines successfully saved to headlines.txt!")
+except Exception as e:
+    print(f"Error occurred: {e}")
