@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Portfolio - Shaik Umar Basha">
+  <title>Shaik Umar Basha | Portfolio</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 { font-size: 2rem; }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #333;
+    }
+    nav a {
+      color: #fff; padding: 15px 20px; text-decoration: none;
+    }
+    nav a:hover {
+      background: #444;
+    }
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+    h2 {
+      color: #444;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+    ul { list-style: none; }
+    ul li { margin-bottom: 10px; }
+    .skills span {
+      display: inline-block;
+      background: #eee;
+      padding: 5px 10px;
+      margin: 5px;
+      border-radius: 5px;
+    }
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+    .contact-links a {
+      color: #00bfff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Shaik Umar Basha</h1>
+  <p>B.Tech AI & Data Science | Python | Java | Power BI | Tableau</p>
+</header>
+
+<nav>
+  <a href="#profile">Profile</a>
+  <a href="#education">Education</a>
+  <a href="#projects">Projects</a>
+  <a href="#experience">Experience</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="profile">
+  <h2>Profile Summary</h2>
+  <p>Motivated and detail-oriented B.Tech student specializing in Artificial Intelligence and Data Science, with skills in Python,
+  Java, Power BI, Tableau, and cloud technologies. Eager to apply academic knowledge and hands-on project experience to
+  real-world problems. Seeking an entry-level software engineering role in a collaborative environment that promotes
+  innovation, learning, and continuous growth.</p>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <ul>
+    <li><strong>Annamacharya Institute of Technology and Science, Razampet</strong> — B.Tech in AI & Data Science (2023–2026) — 80%</li>
+    <li><strong>Narayanadri Institute of Science and Technology, Rajampet</strong> — Diploma in Mechanical Engineering (2015–2021) — 65.81%</li>
+    <li><strong>St. Joseph’s English Medium High School, Nandalur</strong> — SSC (2015) — 83%</li>
+  </ul>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <ul>
+    <li><strong>Personal Portfolio Website</strong> — Designed and developed a fully responsive personal portfolio website showcasing skills and projects using HTML, CSS, and JavaScript.</li>
+  </ul>
+</section>
+
+<section id="experience">
+  <h2>Internships & Workshops</h2>
+  <ul>
+    <li><strong>Data Visualization Workshop</strong> (2024, Srivensy Technologies) — Created dashboards using Power BI.</li>
+    <li><strong>Data Science Internship</strong> (Feb–May 2024, APSSDC & Indo-Euro Synchronization) — Grade A.</li>
+    <li><strong>Python Full Stack Development Internship</strong> (Mar–May 2025, AITS Certified).</li>
+  </ul>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <span>Python</span>
+    <span>Java (Basics)</span>
+    <span>SQL</span>
+    <span>Power BI</span>
+    <span>Tableau</span>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>Problem Solving</span>
+    <span>Teamwork</span>
+    <span>Communication</span>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:shaik.umarpa34@gmail.com">shaik.umarpa34@gmail.com</a></p>
+  <p>Phone: +91-7799561972</p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/shaik-umar-basha-08559a228" target="_blank">linkedin.com/in/shaik-umar-basha</a></p>
+  <p>GitHub: <a href="https://github.com/UMAR1184" target="_blank">github.com/UMAR1184</a></p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Shaik Umar Basha | Portfolio</p>
+</footer>
+
+</body>
+</html>
