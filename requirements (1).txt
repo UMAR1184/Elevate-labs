@@ -1,0 +1,15 @@
+# Enhanced Chatbot Requirements
+# No external dependencies required - uses only Python standard library
+# 
+# Standard library modules used:
+# - random (for response variation)
+# - re (for pattern matching)
+# - json (for conversation saving)
+# - datetime (for timestamps)
+# - typing (for type hints)
+
+# Optional: For future enhancements, you might consider:
+# nltk>=3.8          # For advanced natural language processing
+# textblob>=0.17     # For sentiment analysis
+# spacy>=3.4         # For named entity recognition
+# requests>=2.28     # For API integrations (weather, news, etc.)
